@@ -6,32 +6,32 @@
             <form method="POST" action="/listings" novalidate class="needs-validation">
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
-                    <input name="listings[title]" placeholder="Add a Catchy Title" type="text" class="form-control" required />
+                    <input name="listing[title]" placeholder="Add a Catchy Title" type="text" class="form-control" required />
                     <div class="valid-feedback">Title looks good!</div>
                 </div>
                 
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea name="listings[description]" class="form-control" required></textarea>
+                    <textarea name="listing[description]" class="form-control" required></textarea>
                     <div class="invalid-feedback">Please enter a short description</div>
 
                 </div>
 
                 <div class="mb-3">
                     <label for="image" class="form-label">Image Link</label>
-                    <input name="listings[image]" placeholder="Enter image URL/Link" type="text" class="form-control" />
+                    <input name="listing[image]" placeholder="Enter image URL/Link" type="text" class="form-control" />
                 </div>
                 <div class="row">
 
                     <div class="mb-3 col-md-4">
                         <label for="price" class="form-label">Price</label>
-                        <input name="listings[price]" placeholder="1200"  class="form-control" required/>
+                        <input name="listing[price]" placeholder="1200"  class="form-control" required/>
                         <div class="invalid-feedback">Price should be valid</div>
                     </div>
 
                     <div class="mb-3 col-md-8">
                         <label for="country" class="form-label">Country</label>
-                        <input name="listings[country]" placeholder="India" type="text" class="form-control" required/>
+                        <input name="listing[country]" placeholder="India" type="text" class="form-control" required/>
                         <div class="invalid-feedback">Country name should be valid</div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
 
                 <div class="mb-3">
                     <label for="location" class="form-label">Location</label>
-                    <input name="listings[location]" placeholder="Patna, Bihar" type="text" class="form-control" required/>
+                    <input name="listing[location]" placeholder="Patna, Bihar" type="text" class="form-control" required/>
                     <div class="invalid-feedback">Location should be valid</div>
                 </div>
 
