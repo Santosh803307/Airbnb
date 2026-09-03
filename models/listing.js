@@ -10,19 +10,21 @@ const listingSchema = new Schema({
     description: String,
 
     image: {
-        filename: {
-            type: String,
-            default: "listingimage",
-        },
-        url: {
-            type: String,
-            default:
-                "https://images.unsplash.com/photo-1494526585095-c41746248156",
-            set: (v) =>
-                v === ""
-                    ? "https://images.unsplash.com/photo-1494526585095-c41746248156"
-                    : v,
-        },
+        url: String,
+        filename: String,
+        // filename: {
+        //     type: String,
+        //     default: "listingimage",
+        // },
+        // url: {
+        //     type: String,
+        //     default:
+        //         "https://images.unsplash.com/photo-1494526585095-c41746248156",
+        //     set: (v) =>
+        //         v === ""
+        //             ? "https://images.unsplash.com/photo-1494526585095-c41746248156"
+        //             : v,
+        // },
     },
 
     price: Number,
@@ -34,6 +36,10 @@ const listingSchema = new Schema({
             ref: "Review",
         },
     ], 
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+    },
 });
 
 listingSchema.post("findOneAndDelete", async (listing) => {
